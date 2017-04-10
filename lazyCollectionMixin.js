@@ -68,25 +68,9 @@ const LazyCollection = {
   },
 
   find(fn) {
-    return Object.assign({
-      [Symbol.iterator]: () => {
-        const iterator = this[Symbol.iterator]();
-
-        return {
-          next: () => {
-            let {
-              done, value
-            } = iterator.next();
-
-            done = done || fn(value);
-
-            return ({
-              done, value: done ? undefined : value
-            });
-          }
-        }
-      }
-    }, LazyCollection)
+    for(const element of this){
+        if(fn(element)) return element
+    }
   },
 
   until(fn) {
