@@ -45,7 +45,6 @@ const LazyCollection = {
     }
     return accumulator;
   },
-
   filter(fn) {
     return Object.assign({
       [Symbol.iterator]: () => {
@@ -53,10 +52,9 @@ const LazyCollection = {
 
         return {
           next: () => {
+            let done, value;
             do {
-              const {
-                done, value
-              } = iterator.next();
+               ( {done, value } = iterator.next());
             } while (!done && !fn(value));
             return {
               done, value
