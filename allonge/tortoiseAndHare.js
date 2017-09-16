@@ -1,7 +1,3 @@
-//Again, thanks to mr Braithwaite for this... wonderful piece of code.
-//Altho I guess this is actuallu Robert Floyd's fault.
-
-
 const EMPTY = null;
 
 const isEmpty = (node) => node === EMPTY;

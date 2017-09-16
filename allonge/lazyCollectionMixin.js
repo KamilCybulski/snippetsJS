@@ -1,5 +1,4 @@
 //Set of more commonly used methods that can be applied to any ordered //collection that is also an iterable
-//From JavaScript Allonge by Reginald Braithwaite
 
 
 const extend = function (consumer, ...providers) {

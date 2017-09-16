@@ -1,5 +1,5 @@
-/*The idea is to implement a linked list with just functions (and assignment operators). This is a concept
-I've encounetered while reading JavaScript Allonge and I'm doing this to understand it better. */
+/*The idea is to implement a linked list with just functions (and assignment operators).
+*/
 
 //Basic combinators
 const K = (x) => (y) => x,

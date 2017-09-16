@@ -1,0 +1,19 @@
+{
+  "name": "snippets-js",
+  "version": "1.0.0",
+  "description": "JS snippets",
+  "main": "index.js",
+  "repository": "https://github.com/KamilCybulski/snippetsJS.git",
+  "author": "kamyl",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "ajv": "^5.2.2",
+    "eslint": "^4.7.0",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "jest": "^21.1.0"
+  }
+}
