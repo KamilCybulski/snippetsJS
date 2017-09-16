@@ -1,38 +1,24 @@
 /* eslint no-plusplus: ["error", { "allowForLoopAfterthoughts": true }] */
 
+// O(n2), pretty useless
+
 const bubbleSort = (array) => {
-  let sortedArray;
+  const sortedArray = array;
+  let swapped;
 
-  const sort = (toSort) => {
-    let swapped;
-    const arr = toSort;
-
-    do {
-      swapped = false;
-      for (let i = 0; i < arr.length - 1; i++) {
-        const first = arr[i];
-        const second = arr[i + 1];
-
-        if (first > second) {
-          swapped = true;
-          arr[i] = second;
-          arr[i + 1] = first;
-        }
+  do {
+    swapped = false;
+    for (let i = 0; i < sortedArray.length - 1; i++) {
+      const first = sortedArray[i];
+      const second = sortedArray[i + 1];
+      if (first > second) {
+        swapped = true;
+        sortedArray[i] = second;
+        sortedArray[i + 1] = first;
       }
-    } while (swapped);
-    return arr;
-  };
+    }
+  } while (swapped);
 
-  switch (array.length) {
-    case 0:
-      sortedArray = [];
-      break;
-    case 1:
-      sortedArray = array;
-      break;
-    default:
-      sortedArray = sort(array);
-  }
   return sortedArray;
 };
 
