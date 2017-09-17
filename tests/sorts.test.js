@@ -8,7 +8,7 @@ const test = (name, fn) => {
       expect(fn([])).toHaveLength(0);
     });
 
-    it('Returns the same array when an passed array with 1 element', () => {
+    it('Returns the same array when passed an array with 1 element', () => {
       expect(fn([1])).toHaveLength(1);
       expect(fn([1])).toEqual(expect.arrayContaining([1]));
     });
