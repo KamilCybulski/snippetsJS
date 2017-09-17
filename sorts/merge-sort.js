@@ -2,9 +2,6 @@
 // Maybe a little heave on the memory
 
 const mergeSort = (arr) => {
-  const mid = Math.trunc(arr.length / 2);
-  let sortedArr;
-
   const merge = (arr1, arr2) => {
     if (arr1.length === 0) return arr2;
     if (arr2.length === 0) return arr1;
@@ -18,19 +15,10 @@ const mergeSort = (arr) => {
     return element.concat(merge(arr1.slice(1), arr2));
   };
 
-  switch (arr.length) {
-    case 0:
-      sortedArr = [];
-      break;
+  if (arr.length < 2) return arr;
 
-    case 1:
-      sortedArr = arr;
-      break;
-
-    default:
-      sortedArr = merge(arr.slice(0, mid), arr.slice(mid));
-  }
-  return sortedArr;
+  const mid = Math.trunc(arr.length / 2);
+  return merge(arr.slice(0, mid), arr.slice(mid));
 };
 
 
