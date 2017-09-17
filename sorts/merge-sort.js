@@ -18,7 +18,7 @@ const mergeSort = (arr) => {
   if (arr.length < 2) return arr;
 
   const mid = Math.trunc(arr.length / 2);
-  return merge(arr.slice(0, mid), arr.slice(mid));
+  return merge(mergeSort(arr.slice(0, mid)), mergeSort(arr.slice(mid)));
 };
 
 

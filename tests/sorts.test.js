@@ -24,7 +24,7 @@ const test = (name, fn) => {
     });
 
     it('Sorts the array that doesnt hold duplicate values', () => {
-      const arr = [2, 9, 3, 7];
+      const arr = [9, 2, 3, 7];
       const result = fn(arr);
       // expected result = [2, 3, 7, 9]
 
@@ -36,7 +36,7 @@ const test = (name, fn) => {
     });
 
     it('Sorts the array that holds duplicate values', () => {
-      const arr = [6, 7, 2, 5, 6];
+      const arr = [6, 2, 7, 5, 6];
       const result = fn(arr);
       // expected result = [2, 5, 6, 6, 7]
 
