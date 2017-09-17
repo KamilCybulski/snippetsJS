@@ -1,6 +1,7 @@
 const bubbleSort = require('../sorts/bubble-sort');
 const insertionSort = require('../sorts/insertion-sort');
 const mergeSort = require('../sorts/merge-sort');
+const quickSort = require('../sorts/quicksort');
 
 const test = (name, fn) => {
   describe(name, () => {
@@ -53,3 +54,4 @@ const test = (name, fn) => {
 test('Bubble sort', bubbleSort);
 test('Insertion sort', insertionSort);
 test('Merge sort', mergeSort);
+test('Quicksort', quickSort);
